@@ -2,7 +2,7 @@ This is a very minimal neovim distribution based on lazy.nvim. Plugins are just 
 bamboo colorscheme which is very nice.
 
 
-<leader> = " "
+leader is " "
 
 
 If you press the leader and pause, it will tell you the next possible keys and what they do. Key bindings are:
