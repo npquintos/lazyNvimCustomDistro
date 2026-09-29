@@ -1,6 +1,10 @@
 This is a very minimal neovim distribution based on lazy.nvim. Plugins are just what I normally use. It uses the
 bamboo colorscheme which is very nice.
+
+
 <leader> = " "
+
+
 If you press the leader and pause, it will tell you the next possible keys and what they do. Key bindings are:
 - <leader>O - that is capital "o", invokes Oil. <C-p> while in oil will show file preview as you navigate.
 - s - activates flash.nvim and will do search. You type the first few letters of the string and it will show labels (highlighted with different background and font) that you could type and it will jump there. This is the only enabled keybinding.
