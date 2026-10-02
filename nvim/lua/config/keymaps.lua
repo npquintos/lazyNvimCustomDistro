@@ -32,7 +32,7 @@ map("n", "<leader>>", "xep")
 map("n", "<leader><", "xbP")
 
 -- Clear search highlight
-map("n", "<leader>C", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
+map("n", "<leader><leader>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 
 -- Yank to system clipboard
 map({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to clipboard" })
