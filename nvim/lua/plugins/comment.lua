@@ -2,7 +2,7 @@ return {
   "numToStr/Comment.nvim",
   -- Set keys so lazy.nvim knows to lazy-load the plugin when you press the shortcut
   keys = {
-    { "<leader>c", mode = { "n", "v" }, desc = "Toggle comment" },
+    { "<leader>/", mode = { "n", "v" }, desc = "Toggle comment" },
   },
   config = function()
     -- 1. Initialize Comment.nvim with your preferred configuration options
