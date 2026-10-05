@@ -12,10 +12,10 @@ If you press the leader and pause, it will tell you the next possible keys and w
 - \<leader\>S - works like flash.nvim but typed letter corresponding to the buffer will delete it from memory. WARNING! You have to press \<ESC\> when done or it will continue deleting buffers from memory.
 - \<leader\>/ - will comment current line or lines that are selected. Will only do linewise commenting, as opposed to blockwise commenting.
 - \<leader\>\<leader\>" - to "clear" the highlighting due to a regular search.
-- \<leader\>.> - Normal mode, will move char under cursor to move to end of next word. Useful for moving )}]" to the right of next word
-- \<leader\>,< - Normal mode, will move char under cursor to move to beginning of previous word. Useful for moving ({[" to the beginning of previous word
-- - \<Alt\>.> - Insert mode, will move char under cursor to move to end of next word. Useful for moving )}]" to the right of next word
-- \<Alt\>,< - Insert mode, will move char under cursor to move to beginning of previous word. Useful for moving ({[" to the beginning of previous word
+- \<leader\>. - Normal mode, will move char under cursor to move to end of next word. Useful for moving )}]" to the right of next word
+- \<leader\>, - Normal mode, will move char under cursor to move to beginning of previous word. Useful for moving ({[" to the beginning of previous word
+- \<Alt\>. - Insert mode, will move char under cursor to move to end of next word. Useful for moving )}]" to the right of next word
+- \<Alt\>, - Insert mode, will move char under cursor to move to beginning of previous word. Useful for moving ({[" to the beginning of previous word
 
 I also remapped some regular nvim default keymappings. I use this functionality all the time and the default keybindings are so hard to reach.
 - \<C-arrow\> - for pane resizing; mouse will work too
