@@ -1,5 +1,5 @@
 This is a very minimal neovim distribution based on lazy.nvim. Plugins are just what I normally use. It uses the
-bamboo colorscheme which is very nice.
+bamboo colorscheme which is very nice. Instead of flash.nvim, I used leap.nvim because the former is very, very slow on very large files. You need to type exactly 2 letters before the label would show up.
 
 
 leader is " "
