@@ -1,9 +1,9 @@
 -- assign keymaps to easily access favourite folders
 -- via Oil. You have to modify these to match your
--- favourite folders and then, comment out the next
--- line below
+-- favourite folders and then, comment out the 'return'
+-- statement below so that the keymaps are activated.
 
--- return {}
+return {}
 
 vim.keymap.set("n", "<leader>op", function()
   require("oil").open("y:\\scripts2")
