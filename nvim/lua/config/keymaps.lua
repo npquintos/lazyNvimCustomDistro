@@ -30,14 +30,14 @@ map("n", "j", "gj")
 map("n", "k", "gk")
 
 -- Better parenthesis and quote handling
-map("n", "<leader>.", "xep")
-map("n", "<leader>,", "xbP")
+map("n", "<leader>.", "xep", { desc = "Move \'])}\" to end of next word"})
+map("n", "<leader>,", "xbP", { desc = "Move \'{([\" to beginning of previous word"})
 map("i", "<M-.>", function()
     vim.cmd("normal! xepa")
-    end)
+    end, { desc = "Move \'])}\" to end of next word"})
 map("i", "<M-,>", function()
     vim.cmd("normal! xbPa")
-    end)
+    end, { desc = "Move \'{([\" to beginning of previous word"})
 
 -- Clear search highlight
 map("n", "<leader><leader>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
