@@ -23,3 +23,6 @@ vim.opt.guifont = "CodeNewRoman Nerd Font:h18"
 vim.opt.background = "dark"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- search path for command 'gf'; modify accordingly
+vim.opt.path = {".", "src", "include"}
