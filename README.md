@@ -25,3 +25,7 @@ I also remapped some regular nvim default keymappings. I use this functionality 
 - "B" - for "beginning", goes to beginning ('B' for 'begin', '^' is harder to type) of line, aliases '^'
 
 I used leap.nvim instead of flash.nvim because flash.nvim is very slow for very large files. I used Oil for file explorer because it is very vim-like. You change the file name and it gets renamed; you copy and paste via Y then p, and it will copy the file (but you have to rename the copy whose name remained unchanged after the paste). To commit these changes, you type ":w"
+
+One common action is to open the file underneath the cursor via 'gf'. You specify the folders for the search path via config/options.lua. You modify the entry for 'vim.opt.path'.
+
+Folder 'bookmarks' for folders that are often visited via oil shortcuts defined in config/oilbookmarks.lua. Keybind start with <leader>o (as in "open"), then followed by another character of your liking (e.g. 's' for 'src', 'i' for 'include', 'b' for 'build'). Replace also the defined path inside open()
