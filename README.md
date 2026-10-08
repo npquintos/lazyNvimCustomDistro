@@ -17,6 +17,8 @@ If you press the leader and pause, it will tell you the next possible keys and w
 - \<leader\>\<leader\>" - to "clear" the highlighting due to a regular search.
 - \<Alt\>. - Both normal and insert mode, will move char under cursor to move to end of next word. Useful for moving )}]" to the right of next word. Take note that '.' is below '>' in the keyboard, and is like 'to the right'
 - \<Alt\>, - Both normal and insert mode, will move char under cursor to move to beginning of previous word. Useful for moving ({[" to the beginning of previous word. Take note that ',' is below '<' in the keyboard, and is like 'to the left'
+- \<leader\>t - will open or close terminal on a split pane on the right. This is a toggle.
+- \<leader\>o - will open Oil - the file explorer - on the focused pane, starting at the current working directory.
 
 I also remapped some regular nvim default keymappings. I use this functionality all the time and the default keybindings are so hard to reach.
 - \<C-arrow\> - for pane resizing; mouse will work too
