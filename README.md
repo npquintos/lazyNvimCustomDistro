@@ -12,10 +12,8 @@ If you press the leader and pause, it will tell you the next possible keys and w
 - \<leader\>S - works like leap.nvim search but typed letter corresponding to the buffer that will get deleted from memory. WARNING! You have to press \<ESC\> when done or it will continue deleting buffers from memory.
 - \<leader\>/ - will comment current line or lines that are selected. Will only do linewise commenting, as opposed to blockwise commenting. Works for visually selected lines too.
 - \<leader\>\<leader\>" - to "clear" the highlighting due to a regular search.
-- \<leader\>. - Normal mode, will move char under cursor to move to end of next word. Useful for moving )}]" to the right of next word. Take note that '.' is below '>' in the keyboard, and is like 'to the right'
-- \<leader\>, - Normal mode, will move char under cursor to move to beginning of previous word. Useful for moving ({[" to the beginning of previous word. Take note that ',' is below '<' in the keyboard, and is like 'to the left'
-- \<Alt\>. - Insert mode, will move char under cursor to move to end of next word. Useful for moving )}]" to the right of next word. Take note that '.' is below '>' in the keyboard, and is like 'to the right'
-- \<Alt\>, - Insert mode, will move char under cursor to move to beginning of previous word. Useful for moving ({[" to the beginning of previous word. Take note that ',' is below '<' in the keyboard, and is like 'to the left'
+- \<Alt\>. - Both normal and insert mode, will move char under cursor to move to end of next word. Useful for moving )}]" to the right of next word. Take note that '.' is below '>' in the keyboard, and is like 'to the right'
+- \<Alt\>, - Both normal and insert mode, will move char under cursor to move to beginning of previous word. Useful for moving ({[" to the beginning of previous word. Take note that ',' is below '<' in the keyboard, and is like 'to the left'
 
 I also remapped some regular nvim default keymappings. I use this functionality all the time and the default keybindings are so hard to reach.
 - \<C-arrow\> - for pane resizing; mouse will work too
