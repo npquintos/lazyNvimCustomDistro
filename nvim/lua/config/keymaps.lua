@@ -2,6 +2,8 @@
 
 local map = vim.keymap.set
 
+-- sdfa, dfsa, adfsf, {dsf, dsfds},  sadsf, sdasdf
+
 -- Better window navigation
 map("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
 map("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
@@ -30,14 +32,61 @@ map("n", "j", "gj")
 map("n", "k", "gk")
 
 -- Better parenthesis and quote handling
-map("n", "<leader>.", "xep", { desc = "Move \'])}\" to end of next word"})
-map("n", "<leader>,", "xbP", { desc = "Move \'{([\" to beginning of previous word"})
-map("i", "<M-.>", function()
+vim.keymap.set("n", "<M-.>", function()
+  local _, col = unpack(vim.api.nvim_win_get_cursor(0))
+  local line = vim.api.nvim_get_current_line()
+  local ch = line:sub(col + 1, col + 1)
+
+  if ch:match("[{%[(<]") then
+    vim.cmd("normal! xwP")
+  elseif ch:match("[}%])>]") then
+    vim.cmd("normal! xep")
+  elseif ch == '"' or ch == "'" then
+    vim.cmd("normal! xep")
+  end
+end)
+
+vim.keymap.set("i", "<M-.>", function()
+  local _, col = unpack(vim.api.nvim_win_get_cursor(0))
+  local line = vim.api.nvim_get_current_line()
+  local ch = line:sub(col + 1, col + 1)
+
+  if ch:match("[{%[(<]") then
+    vim.cmd("normal! xwPa")
+  elseif ch:match("[}%])>]") then
     vim.cmd("normal! xepa")
-    end, { desc = "Move \'])}\" to end of next word"})
-map("i", "<M-,>", function()
-    vim.cmd("normal! xbPa")
-    end, { desc = "Move \'{([\" to beginning of previous word"})
+  elseif ch == '"' or ch == "'" then
+    vim.cmd("normal! xepa")
+  end
+end)
+
+vim.keymap.set("n", "<M-,>", function()
+  local _, col = unpack(vim.api.nvim_win_get_cursor(0))
+  local line = vim.api.nvim_get_current_line()
+  local ch = line:sub(col + 1, col + 1)
+
+  if ch:match("[{%[(<]") then -- works
+    vim.cmd("normal! xBP")
+  elseif ch:match("[}%])>]") then
+    vim.cmd("normal! xBBep") -- works
+  elseif ch == '"' or ch == "'" then
+    vim.cmd("normal! xBP")
+  end
+end)
+
+vim.keymap.set("i", "<M-,>", function()
+  local _, col = unpack(vim.api.nvim_win_get_cursor(0))
+  local line = vim.api.nvim_get_current_line()
+  local ch = line:sub(col + 1, col + 1)
+
+  if ch:match("[{%[(<]") then
+    vim.cmd("normal! xBPa")  
+  elseif ch:match("[}%])>]") then
+    vim.cmd("normal! xBBepa")
+  elseif ch == '"' or ch == "'" then
+    vim.cmd("normal! xBPa")
+  end
+end)
 
 -- Clear search highlight
 map("n", "<leader><leader>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
