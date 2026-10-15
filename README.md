@@ -15,8 +15,8 @@ If you press the leader and pause, it will tell you the next possible keys and w
 - \<leader\>S - works like leap.nvim search but typed letter corresponding to the buffer that will get deleted from memory. WARNING! You have to press \<ESC\> when done or it will continue deleting buffers from memory.
 - \<leader\>/ - will comment current line or lines that are selected. Will only do linewise commenting, as opposed to blockwise commenting. Works for visually selected lines too.
 - \<leader\>\<leader\>" - to "clear" the highlighting due to a regular search.
-- \<Alt\>l - Both normal and insert mode, will move char under cursor to move to end of next word. Useful for moving )}]" to the right of next word. Take note that '.' is below '>' in the keyboard, and is like 'to the right'
-- \<Alt\>h - Both normal and insert mode, will move char under cursor to move to beginning of previous word. Useful for moving ({[" to the beginning of previous word. Take note that ',' is below '<' in the keyboard, and is like 'to the left'
+- \<Alt\>l - (small L) Both normal and insert mode, will move char under cursor to move to end of next word. Useful for moving )}]" to the right of next word.
+- \<Alt\>h - Both normal and insert mode, will move char under cursor to move to beginning of previous word. Useful for moving ({[" to the beginning of previous word.
 - \<leader\>t - will open or close terminal on a split pane on the right. This is a toggle.
 - \<leader\>o - will open Oil - the file explorer - on the focused pane, starting at the current working directory.
 
