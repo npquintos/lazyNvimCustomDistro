@@ -32,7 +32,7 @@ map("n", "j", "gj")
 map("n", "k", "gk")
 
 -- Better parenthesis and quote handling
-vim.keymap.set("n", "<M-.>", function()
+vim.keymap.set("n", "<M-l>", function()
   local _, col = unpack(vim.api.nvim_win_get_cursor(0))
   local line = vim.api.nvim_get_current_line()
   local ch = line:sub(col + 1, col + 1)
@@ -46,7 +46,7 @@ vim.keymap.set("n", "<M-.>", function()
   end
 end)
 
-vim.keymap.set("i", "<M-.>", function()
+vim.keymap.set("i", "<M-l>", function()
   local _, col = unpack(vim.api.nvim_win_get_cursor(0))
   local line = vim.api.nvim_get_current_line()
   local ch = line:sub(col + 1, col + 1)
@@ -60,7 +60,7 @@ vim.keymap.set("i", "<M-.>", function()
   end
 end)
 
-vim.keymap.set("n", "<M-,>", function()
+vim.keymap.set("n", "<M-h>", function()
   local _, col = unpack(vim.api.nvim_win_get_cursor(0))
   local line = vim.api.nvim_get_current_line()
   local ch = line:sub(col + 1, col + 1)
@@ -74,7 +74,7 @@ vim.keymap.set("n", "<M-,>", function()
   end
 end)
 
-vim.keymap.set("i", "<M-,>", function()
+vim.keymap.set("i", "<M-h>", function()
   local _, col = unpack(vim.api.nvim_win_get_cursor(0))
   local line = vim.api.nvim_get_current_line()
   local ch = line:sub(col + 1, col + 1)
