@@ -30,4 +30,4 @@ vim.opt.cursorcolumn = true
 vim.opt.path = {".", "src", "include"}
 
 -- disable regular key maps that I never use
-vim.keymap.del('n', 'K')
+vim.keymap.set('n', 'K', '<Nop>')
