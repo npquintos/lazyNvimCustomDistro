@@ -28,3 +28,6 @@ vim.opt.cursorcolumn = true
 
 -- search path for command 'gf'; modify accordingly
 vim.opt.path = {".", "src", "include"}
+
+-- disable regular key maps that I never use
+vim.keymap.del('n', 'K')
