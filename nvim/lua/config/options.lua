@@ -31,3 +31,6 @@ vim.opt.path = {".", "src", "include"}
 
 -- disable regular key maps that I never use
 vim.keymap.set('n', 'K', '<Nop>')
+
+-- search visually selected texts using *
+vim.keymap.set('x', '*', [[y/\V<C-R>"<CR>]])
