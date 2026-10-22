@@ -11,7 +11,7 @@ return {
         "icon",
         -- "permissions",
         -- "size",
-        -- "mtime",
+        "mtime",
       },
       -- Buffer-local options to use for oil buffers
       buf_options = {
@@ -100,7 +100,7 @@ return {
         sort = {
           -- sort order can be "asc" or "desc"
           -- see :help oil-columns to see which columns are sortable
-          { "type", "asc" },
+          { "mtime", "desc" },
           { "name", "asc" },
         },
         -- Customize the highlight group for the file name
