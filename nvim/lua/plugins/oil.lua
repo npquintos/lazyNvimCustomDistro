@@ -1,5 +1,8 @@
 return {
     "stevearc/oil.nvim",
+    dependencies = {
+        "nvim-tree/nvim-web-devicons",
+    },
     config = function()
         require("oil").setup({
       -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
@@ -11,7 +14,7 @@ return {
         "icon",
         -- "permissions",
         -- "size",
-        "mtime",
+        -- "mtime",
       },
       -- Buffer-local options to use for oil buffers
       buf_options = {
@@ -100,7 +103,7 @@ return {
         sort = {
           -- sort order can be "asc" or "desc"
           -- see :help oil-columns to see which columns are sortable
-          { "mtime", "desc" },
+          { "type", "asc" },
           { "name", "asc" },
         },
         -- Customize the highlight group for the file name
@@ -205,8 +208,11 @@ return {
         border = nil,
       }
     })
-    end,
-    dependencies = {
-        "nvim-tree/nvim-web-devicons",
-    },
+    local prefix_dirs = require("config.oilbookmarks")
+    for prefix, dir in pairs(prefix_dirs) do
+        vim.keymap.set("n", "<leader>o" .. prefix, function()
+            require("oil").open(dir)
+        end, { desc = "Oil: " .. dir})
+    end
+end
 }
