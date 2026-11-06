@@ -34,3 +34,6 @@ vim.keymap.set('n', 'K', '<Nop>')
 
 -- search visually selected texts using *
 vim.keymap.set('x', '*', [[y/\V<C-R>"<CR>]])
+
+-- make nvim share the system clipboard
+opt.clipboard = "unnamedplus"
